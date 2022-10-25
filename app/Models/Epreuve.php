@@ -8,13 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Epreuve extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'numepreuve',
-        'lieu',
-        'datepreuve',
-        'matiere_id',
-    ];
-    public function matieres() 
+    
+    public function matiere() 
     { 
         return $this->belongsTo(Matiere::class); 
     }

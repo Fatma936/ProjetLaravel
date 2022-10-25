@@ -8,11 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Matiere extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'codemat',
-        'libelle',
-        'coef',
-    ];
+    
     public function epreuves()
     { 
         return $this->hasMany(Epreuve::class); 
